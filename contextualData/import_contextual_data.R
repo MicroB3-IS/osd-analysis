@@ -18,7 +18,7 @@ setInternet2(TRUE) # Allows https access
 
 # This could be (should be?) switched to PANGAEA's tsv link...
 rawContextualData <- read.csv(
-	"https://colab.mpi-bremen.de/micro-b3/svn/MegDb/trunk/exports/pangaea_submission_export_20140306.csv",
+	"https://zarafa.mpi-bremen.de/owncloud/public.php?service=files&t=f0e297f451b9944b32f4b2366c74cde3&download&path=/samples/OSD2014-env_data-2015-09-01.csv",
 	header = T,
 	sep = "|",
 	quote = '"',
@@ -30,7 +30,7 @@ row.names(rawContextualData) <- rawContextualData[, "label"]
 
 # check the dimensions of the table...
 #  dim(rawContextualData)
-#    [1] 189  51
+#    [1] 203  54
 
 # Now, partition the table into objects that contain logically aggregated
 
@@ -78,8 +78,11 @@ factorData <- rawContextualData[,
 		"mrgid", # Marine regions general identifer (corresponds to IHO label
 		"protocol",   # 
 		"biome",
+		"biome_id",
 		"feature",
-		"material"
+		"feature_id",
+		"material",
+		"material_id"
 	)
 ]
 
@@ -142,3 +145,4 @@ numericData[is.nan(numericData)] <- NA
 #Clean up ...
 rm(list = c("tempNames"))
 gc()
+na, n
