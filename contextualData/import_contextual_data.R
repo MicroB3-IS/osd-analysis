@@ -145,4 +145,3 @@ numericData[is.nan(numericData)] <- NA
 #Clean up ...
 rm(list = c("tempNames"))
 gc()
-na, n
