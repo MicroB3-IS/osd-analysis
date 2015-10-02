@@ -181,5 +181,5 @@ numericData <- data.matrix(numericData)
 numericData[is.nan(numericData)] <- NA
 
 #Clean up ...
-rm(list = c("tempNames"))
+rm(list = c("tempNames", "i"))
 gc()
