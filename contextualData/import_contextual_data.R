@@ -22,6 +22,7 @@ rawContextualData <- read.csv(
 	header = T,
 	sep = "|",
 	quote = '"',
+	colClasses = "character"
 	)
 
 # Set row names to a (sensible) unique identifier, here I chose the ENA 
@@ -59,7 +60,33 @@ spatialData <- rawContextualData[,
 	)
 ]
 
+# cast as numeric
+spatialData <- sapply(spatialData, as.numeric)
+# regenerate row names
+row.names(spatialData) <- row.names(rawContextualData)
+
+
 # create a temporal data object
+
+
+# Standardise UTC times to POSIX
+# R can do calculations with these, unlike simple strings
+#
+# for example:
+# temporalData.computable$startTimes[1:4] - temporalData.computable$startTimes[5:8]
+# Time differences in days
+# [1] -1.239583 -3.294410 -2.386806 -2.303472
+#
+# row.names are lost, however, but the order is preserved
+
+temporalData.computable <- list()
+temporalData.computable$startTimes <- strptime(rawContextualData$start_date_time_utc, format="%Y-%m-%dT%H:%M:%S+00", tz = "UTC")
+temporalData.computable$endTimes <- strptime(rawContextualData$end_date_time_utc, format="%Y-%m-%dT%H:%M:%S+00", tz = "UTC")
+
+
+# store the textual representations of time and date.
+# not useful for computation (use the list object above for that),
+# but good for reference.
 temporalData <- rawContextualData[, 
 	c(
 		"local_date",  # local at site!! Not Zulu.
@@ -69,6 +96,7 @@ temporalData <- rawContextualData[,
 		"end_date_time_utc"
 	)
 ]
+
 
 
 # Create a table containing all categorical variables...
@@ -85,6 +113,16 @@ factorData <- rawContextualData[,
 		"material_id"
 	)
 ]
+
+# Transform [biome,feature,material]_id values to valid IDs
+
+idFields <- c("biome_id", "feature_id", "material_id")
+
+for (i in idFields) {
+  factorData[,paste(i)] <- gsub("^","http://purl.obolibrary.org/obo/ENVO_", factorData[, paste(i)])
+}
+
+rm(idFields)
 
 # Tell R that these are "factor" data, so that they are treated like
 # categorical variables...
