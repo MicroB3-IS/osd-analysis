@@ -1,13 +1,11 @@
 # Import OSD metdata
-# !!! This is a preliminary script!!!
-# More curation needs to be done on some fields, such as ENVO classifications
-# and output should be validated. If you spot any errors with your site's
-# data, please let Renzo, Pier, or Ivo know!
+
+# The data set itself is documented here:
+# https://github.com/MicroB3-IS/osd-analysis/wiki/OSD-2014-environmental-data-csv-documentation
+# If you spot any errors in this data, plese post an issue to: 
+# https://github.com/MicroB3-IS/osd-analysis/issues
 
 # First step, pull the data from the database export online.
-# If any data is updated on the database, you'll have the latest
-# version. If the format (column names, etc) is the same between
-# releases, the same script can be used.
 # Note: if not using Windows, you may need to use RCurl.
 
 setInternet2(TRUE) # Allows https access
