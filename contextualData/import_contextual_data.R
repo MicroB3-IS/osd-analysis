@@ -16,7 +16,7 @@ setInternet2(TRUE) # Allows https access
 
 # This could be (should be?) switched to PANGAEA's tsv link...
 rawContextualData <- read.csv(
-	"https://zarafa.mpi-bremen.de/owncloud/public.php?service=files&t=f0e297f451b9944b32f4b2366c74cde3&download&path=/samples/OSD2014-env_data-2015-09-01.csv",
+	"https://owncloud.mpi-bremen.de/index.php/s/eaB3ChiDG6i9C6M/download?path=%2F2014%2Fsamples&files=OSD2014-env_data-2015-09-01.csv",
 	header = T,
 	sep = "|",
 	quote = '"',
