@@ -1,3 +1,8 @@
+#TODO FIXME: row names need to be updated.
+#setdiff(row.names(raw16Scounts), unique(intersect(row.names(rawContextualData), row.names(raw16Scounts))))
+#[1] "OSD114_2014-06-21_50m_NPL022" 
+#[2] "OSD118_2014-06-24_0.2m_NPL022"
+#[3] "OSD72_2014-07-21_0.8m_NPL022" 
 
 
 # May be needed on some Windows machines
@@ -17,7 +22,8 @@ require(data.table)
 raw16Scounts <- fread(
   input = "https://owncloud.mpi-bremen.de/index.php/s/eaB3ChiDG6i9C6M/download?path=%2F2014%2Fsilva-ngs%2F16s%2Flgc%2Fotu_table&files=osd2014_16s_lgc_otu_by_sample.csv",
   header = T,
-  sep = ","
+  sep = ",",
+  showProgress = FALSE
 )
 
 # OTUs by sampling sites...

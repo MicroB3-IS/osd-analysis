@@ -178,6 +178,13 @@ numericData <- data.matrix(numericData)
 # For semantic consistency, replace NaNs with NAs
 numericData[is.nan(numericData)] <- NA
 
+combinedEnvSpatTempData <- data.frame(
+  spatialData,
+  temporalData,
+  factorData, 
+  numericData
+  )
+
 #Clean up ...
 rm(list = c("tempNames", "i"))
 gc()

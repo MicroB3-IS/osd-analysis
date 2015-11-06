@@ -1,3 +1,10 @@
+if (is.element("phyloseq", installed.packages()[,1])) {
+  print("using existing phyloseq installation...")
+} else {install.packages("phyloseq")}
+
+require(phyloseq)
+
+
 library(data.table)
 library(phyloseq)
 library(metagenomeSeq)
@@ -5,6 +12,9 @@ library(metagenomeSeq)
 #TODO: make this a phyloseq object creation script 
 # with all pre-processing and cleaning
 
+
+# TODO: make sure that all row.names match between
+# taxonomy, metadata, and seqs
 
 #TODO: add import of abundance table, taxonomy, and contextual data from OWNCloud
 
