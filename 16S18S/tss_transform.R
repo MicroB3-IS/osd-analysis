@@ -1,7 +1,24 @@
+# Note that this script will standardise the data with the
+# total sum of all OTUs detected at a given site.
+# this is not the same as the original number of reads, low
+# quality reads that were discarded by SILVAngs are not
+# featured here.
+
+if (exists("raw16Scounts") == FALSE){
+  source("import_16S.R")
+} else {print("using existing raw16Scounts matrix")}
 
 
-standf<-function(x) x/sum(x)
-osd.physeq.filtered.transf <- transform_sample_counts(osd.physeq.filtered, standf)
-#gps = transform_sample_counts(GP, function(x) x/sum(x))
+if (is.element("vegan", installed.packages()[,1])) {
+  print("using existing vegan installation...")
+} else {install.packages("vegan")}
 
-#TODO:make options for total read count or total feature count (i.e. annotated reads)
+require(vegan)
+
+tss16Scounts <- decostand(
+  raw16Scounts, 
+  MARGIN = 1, 
+  method = "total"
+  )
+
+gc()
