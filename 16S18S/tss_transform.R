@@ -5,7 +5,7 @@
 # featured here.
 
 if (exists("raw16Scounts") == FALSE){
-  source("import_16S.R")
+  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/16S18S/import_16S.R")
 } else {print("using existing raw16Scounts matrix")}
 
 

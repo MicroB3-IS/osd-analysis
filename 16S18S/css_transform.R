@@ -1,12 +1,9 @@
-#TODO: turn this into a general script to CSS transform an OTU table or similar
-
-library(data.table)
-
-
+# May be needed on some Windows machines
+#setInternet2(TRUE) # Allows https access
 
 # check 
 if (exists("raw16Scounts") == FALSE){
-  source("import_16S.R")
+  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/16S18S/import_16S.R")
 } else {print("using existing raw16Scounts matrix")}
 
 
@@ -26,7 +23,7 @@ MGS <- newMRexperiment(
 # if using cumNormStatFast: see https://support.bioconductor.org/p/64061/
 MGS <- cumNorm(MGS, p = cumNormStat(MGS))
 
-# this will report that it's using the 'default value' as the estimated
+# this may report that it's using the 'default value' as the estimated
 # quantile value is too small. The value used is 0.5
 # See: https://support.bioconductor.org/p/64311/
 
@@ -36,13 +33,14 @@ MGS <- cumNorm(MGS, p = cumNormStat(MGS))
 # we set the scaling factor, sl, to the median of the normalisation factors
 # stored in the MGS object, as recommended by Paulsen et al.
 
-countData.css <- MRcounts(
+css16Scounts <- t(MRcounts(
   MGS, 
-  norm = T,
-  log = T,
+  norm = TRUE,
+  log = TRUE,
   sl = median(unlist(normFactors(MGS)))
-)
+))
 
+rm(MGS)
 gc()
 
 
