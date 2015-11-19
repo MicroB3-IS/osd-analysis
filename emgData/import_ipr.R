@@ -19,14 +19,11 @@ iprData <- fread(
   showProgress = FALSE
 )
 
-iprDescriptions <- iprData[, "description", with = F]
+iprDescriptions <- iprData[, c("IPR", "description"), with = F]
 
 iprData[ , description:=NULL]
 
 # Replace EMG codes with OSD Names...
-if (exists("rawContextualData") == FALSE){
-  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/contextualData/import_contextual_data.R")
-} else {print("using existing rawContextualData object")}
 
 enaRun2osdId <- fread(
   "https://owncloud.mpi-bremen.de/index.php/s/eaB3ChiDG6i9C6M/download?path=%2F2014%2Femg&files=OSDlabel-to-ENArun-2015-11-19.tsv",
@@ -65,4 +62,5 @@ iprNames.osdLabels <- merge(iprNames, enaRun2osdId)[names(iprData), "osdLabel", 
 iprNames.osdLabels[1] <- "IPR"
 setnames(iprData, iprNames.osdLabels$osdLabel)
 
-
+rm(iprNames)
+rm(iprNames.osdLabels)
