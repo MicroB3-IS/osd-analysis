@@ -2,9 +2,9 @@
 #setInternet2(TRUE) # Allows https access
 
 # check 
-if (exists("raw16Scounts") == FALSE){
-  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/16S18S/import_16S.R")
-} else {print("using existing raw16Scounts matrix")}
+if (exists("iprCounts") == FALSE){
+  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/emgData/import_ipr.R")
+} else {print("using existing iprCounts matrix")}
 
 
 if (is.element("metagenomeSeq", installed.packages()[,1])) {
@@ -14,8 +14,10 @@ if (is.element("metagenomeSeq", installed.packages()[,1])) {
 require(metagenomeSeq)
 
 # Create the metagenomeSeq object
+# rows are samples/sites, columns are variables,
+# thus the need to transpose for the MGS object
 MGS <- newMRexperiment(
-  counts = t(raw16Scounts)
+  counts = t(iprCounts)
 )
 
 # Trigger metagenomeSeq to calculate its Cumulative Sum scaling factor.
@@ -33,7 +35,7 @@ MGS <- cumNorm(MGS, p = cumNormStat(MGS))
 # we set the scaling factor, sl, to the median of the normalisation factors
 # stored in the MGS object, as recommended by Paulsen et al.
 
-css16Scounts <- t(MRcounts(
+cssIprCounts <- t(MRcounts(
   MGS, 
   norm = TRUE,
   log = TRUE,

@@ -63,11 +63,12 @@ iprNames.osdLabels[1] <- "IPR"
 setnames(iprData, iprNames.osdLabels$osdLabel)
 
 # create count data frame for further prcessing...
-iprCounts <- as.data.frame(
+iprCounts <- t(as.data.frame(
   iprData[ ,grep("^OSD", names(iprData)), with = F]
-  )
+  ))
 
-row.names(iprCounts) <- iprData$IPR
+colnames(iprCounts) <- iprData$IPR
+
 
 rm(iprData)
 rm(enaRun2osdId)
