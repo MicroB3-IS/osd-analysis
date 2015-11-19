@@ -4,9 +4,9 @@
 # quality reads that were discarded by SILVAngs are not
 # featured here.
 
-if (exists("raw16Scounts") == FALSE){
-  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/16S18S/import_16S.R")
-} else {print("using existing raw16Scounts matrix")}
+if (exists("iprCounts") == FALSE){
+  source("https://raw.githubusercontent.com/MicroB3-IS/osd-analysis/master/emgData/import_ipr.R")
+} else {print("using existing iprCounts matrix")}
 
 
 if (is.element("vegan", installed.packages()[,1])) {
@@ -15,8 +15,8 @@ if (is.element("vegan", installed.packages()[,1])) {
 
 require(vegan)
 
-tss16Scounts <- decostand(
-  raw16Scounts, 
+tssIprCounts <- decostand(
+  iprCounts, 
   MARGIN = 1, 
   method = "total"
   )
