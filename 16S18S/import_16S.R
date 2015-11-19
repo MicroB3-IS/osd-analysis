@@ -4,7 +4,12 @@
 #[2] "OSD118_2014-06-24_0.2m_NPL022"
 #[3] "OSD72_2014-07-21_0.8m_NPL022" 
 
-
+# assuming that the contextual data from the 17th 
+# of November has the right names, we have...
+#cbind(
+#  contextualData = grep("OSD114|OSD118|OSD72.*NPL022", sort(row.names(rawContextualData)), value = T),
+#  raw16SCounts = grep("OSD114|OSD118|OSD72.*NPL022", sort(row.names(raw16Scounts)), value = T)
+#  )
 # May be needed on some Windows machines
 #setInternet2(TRUE) # Allows https access
 
