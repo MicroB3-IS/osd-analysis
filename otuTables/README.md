@@ -1,5 +1,5 @@
 #General
-The `create_oututab.py` generates a sample-by-otu table from SILVAngs statistics files.
+The `create_out_tab.py` generates a sample-by-otu table from SILVAngs statistics files.
 
 # Usage
 
