@@ -3,7 +3,7 @@ Repository for all Ocean Sampling Day related source code with information on ho
 
 * check out the these Data Guides get an overview of
   * [OSD 2014 data](https://github.com/MicroB3-IS/osd-analysis/wiki/Guide-to-OSD-2014-data)
-  * [OSD and MyOSD 2015 data](https://github.com/MicroB3-IS/osd-analysis/wiki/Guide-to-OSD-2015-data)
+  * [OSD and MyOSD 2015 data - in progress](https://github.com/MicroB3-IS/osd-analysis/wiki/Guide-to-OSD-2015-data)
   * [OSD and MyOSD 2016 data - in progress](https://github.com/MicroB3-IS/osd-analysis/wiki/Guide-to-OSD-2016-data)
 
 # Warning
