@@ -1,68 +1,60 @@
 ---
 permalink: "/data/2014"
 ---
-
 # Introduction
 
-Purpose of this guide is to give a consolidated and authoritative overview of the data from OSD 2014
+Purpose of this guide is to give a consolidated and authoritative overview of  OSD 2014 data.
 
 You should
+
 * get an overview of which data from OSD 2014 is available where
 * understand how the data was generated
-* and bring you in the position to correctly use and interpret the data 
+* and bring you in the position to correctly use and interpret the data
 
 ## Overview
 
 In the days around solstice June 2014 more than 150 scientist teams collected samples around the world.
 
-This resulted
+The result was:
 
 * 150 metagenome samples from around 150 sites
 * 155 samples collected by protocol NPL022 and 16S amplicon sequenced by LGC (lgc)
 * 155 samples collected by protocol NPL022 and 18S amplicon sequenced by LGC (lgc)
-* 7 samples collected by protocol NPL022 and 16S amplicon sequenced by Australia (ramaciotti)  
+* 7 samples collected by protocol NPL022 and 16S amplicon sequenced by Australia (ramaciotti)
 * 30 samples collected of by protocol NE08 and 18S V4 region amplicon sequenced by LifeWatch Italy (lw) [see protocol for details](http://mb3is.megx.net/osd-files/download?path=/2014/protocols&files=OSD2014_protocol_B_18S_V4andV9_Sequencing_LifeWath_MoBiLab_BARI.pdf)
 * 32 samples collected by protocol NE08 and 18S V9 region sequenced by LifeWatch (lw) [see protocol for details](http://mb3is.megx.net/osd-files/download?path=/2014/protocols&files=OSD2014_protocol_B_18S_V4andV9_Sequencing_LifeWath_MoBiLab_BARI.pdf)
 
 [Details about protocols NPL022 and NE08 are in the OSD Handbook](http://www.microb3.eu/sites/default/files/osd/OSD_Handbook_v2.0.pdf)
 
-[Material and Methods for "OSD 2014 - from sampling to sequencing" can be downloaded here]
-(http://mb3is.megx.net/osd-files?path=/2014/protocols)
+[Material and Methods for "OSD 2014 - from sampling to sequencing" can be downloaded here](http://mb3is.megx.net/osd-files?path=/2014/protocols)
 
 Please note that we have different sequencing centers who did sequencing:
 
 1. LGC Genomics (shorthand: lgc), our main sequencing center who did metagenomes and 16/18S from protocol NPL022
-2. LifeWatch Italy (shorthand: lw), who kindly provided sequencing for protocol NE08 samples [see protocol for details](http://mb3is.megx.net/osd-files/download?path=/2014/protocols&files=OSD2014_protocol_B_18S_V4andV9_Sequencing_LifeWath_MoBiLab_BARI.pdf)
-3. Australia - Ramaciotti (shorthand: ramaciotti), who for legal reasons had to sequence all 7 Australian sites 
+1. LifeWatch Italy (shorthand: lw), who kindly provided sequencing for protocol NE08 samples [see protocol for details](http://mb3is.megx.net/osd-files/download?path=/2014/protocols&files=OSD2014_protocol_B_18S_V4andV9_Sequencing_LifeWath_MoBiLab_BARI.pdf)
+1. Australia - Ramaciotti (shorthand: ramaciotti), who for legal reasons had to sequence all 7 Australian sites
 
 ## Initial sequence data pre-processing
 
 The sequence data as delivered by the sequencing centers was pre-processed in order to derive common data sets on which to base follow-up analysis. [Please see wiki page on pre-processing for details](https://github.com/MicroB3-IS/osd-analysis/wiki/Sequence-Data-Pre-Processing)
 
-In summary the pre-processing results in two kinds of quality controlled sequence datasets **raw** and **workable** for each input sequence set:
+In summary the pre-processing results in two kinds of quality controlled sequence data sets **raw** and **workable** for each input sequence set:
 
 * For amplicon data the output files per sample are:
-
-    * raw: non-merged
-
-    * workable: merged 
-
+  * raw: non-merged
+  * workable: merged
 * For shotgun data the output files per sample are:
+  * raw: non-merged (used e.g. by EMG)
+  * workable output files
+    * merged (used e.g. by mg-traits)
+    * non-merged (used e.g. for assemblies)
 
-    * raw: non-merged (used e.g. by EMG)
-
-    * workable output files
-
-        * merged (used e.g. by mg-traits) 
-
-        * non-merged (used e.g. for assemblies)
-
-## Data Deposited in public archives and available on web sites
+## Data deposited in public archives and available on web sites
 
 ### Environmental Data
 
-* Measured by OSD Site Coordinators: [OSD 2014 Environmental Metadata](http://mb3is.megx.net/osd-files/download?path=/2014/samples&files=OSD2014-env_data_2017-11-23.csv) 
-  * CSV with '|' (pipe) as delimiter and UTF-8 encoded 
+* Measured by OSD Site Coordinators: [OSD 2014 Environmental Metadata](http://mb3is.megx.net/osd-files/download?path=/2014/samples&files=OSD2014-env_data_2017-11-23.csv)
+  * CSV with `|` (pipe) as delimiter and UTF-8 encoded
   * take care adjust the settings accordingly while importing this into e.g. EXCEL
   * [Detailed documentation of file structure and content](https://github.com/MicroB3-IS/osd-analysis/wiki/OSD-2014-environmental-data-csv-documentation)
 * Calculated environmental data based on data from public environmental databases: [OSD 2014 Environmental Ancillary Data](http://mb3is.megx.net/osd-files/download?path=/2014/samples&files=OSD2014_db_calculated_environmental_ancillary_data_2015-12-05.xlsx)
@@ -72,17 +64,18 @@ In summary the pre-processing results in two kinds of quality controlled sequenc
 * Scanned [copies of log sheets are available at PANGEA](http://store.pangaea.de/Projects/OSD_2014/)
 
 ### Sequence and other OSD project data
+
 * ENA archived data
   * http://www.ebi.ac.uk/ena/data/view/PRJEB8682
   * as of 2014-04-30 all metagenomes,16S and 18S **raw data** from OSD protocol NPL022
-  * LifeWatch 18S available (see below), archiving at ENA pending 
-* [All **workable data** is available here](http://mb3is.megx.net/osd-files?path=/2014/datasets/workable) 
+  * LifeWatch 18S available (see below), archiving at ENA pending
+* [All **workable data** is available here](http://mb3is.megx.net/osd-files?path=/2014/datasets/workable)
 * [All **raw data** are available here](http://mb3is.megx.net/osd-files?path=/2014/datasets/raw)
 * Metagenome analysis by EMG based on **raw data**
   * https://www.ebi.ac.uk/metagenomics/projects/ERP009703
 * Metagenome analysis by MG-Traits based on **workable data**
   * http://mb3is.megx.net/mg-traits/samples
-* 16S/18S analysis by SILVAngs 
+* 16S/18S analysis by SILVAngs
   * see details below
 
 ## Mapping between OSD metadata and ENA RUNs
@@ -92,16 +85,15 @@ The [OSD 2014 Environmental Metadata](http://mb3is.megx.net/osd-files/download?p
 [Here you can find a file](http://mb3is.megx.net/osd-files/download?path=/2014/emg&files=OSDlabel-to-ENArun-2015-11-19.tsv)  which maps these ``osd_label``s to the respective ENA RUN identifiers.
 
 ## How to find the correct data at EBI
-The dataset has the distinction between 16S and 18S is in the Run alias. The ENA
+
+The data set has the distinction between 16S and 18S is in the Run alias. The ENA
 browser displays the Run title (= a short informative description) rather than
 Run alias (= a submitter provided unique name, frequently being a unique ID
 meaningful only to the submitter).
 e.g.
 ERR867761
-<RUN alias="OSD3-lgc-genomics-18S-199"
-<TITLE>Illumina MiSeq paired end sequencing; Illumina MiSeq sequencing of sample
-OSD3_2014-06-20_0m_NPL022from OSD-JUN-2014</TITLE>
-
+`<RUN alias="OSD3-lgc-genomics-18S-199"/>`
+`<TITLE>Illumina MiSeq paired end sequencing; Illumina MiSeq sequencing of sample OSD3_2014-06-20_0m_NPL022from OSD-JUN-2014</TITLE>`
 
 Furthermore,
 The Run ERR867760 belongs to the Experiment ERX947555
@@ -115,42 +107,44 @@ sequencing)
 http://www.ebi.ac.uk/ena/data/view/ERX947554 (marine 18S rDNA amplicon
 sequencing)
 
+## Additional supplementary/ancillary data
 
-## Additional supplementary/ancillary data 
-
-We make available all other date (i.e. non-archived in public repositories) via MPI Bremen file server. 
+We make available all other date (i.e. non-archived in public repositories) via MPI Bremen file server.
 [This is the highest-level entry point.](http://mb3is.megx.net/osd-files)
 
-
-# Metagenomic data
+## Metagenomic data
 
 ## Raw metagenomic datasets
 
-All metagenomic *raw datasts* are archived at European Nucleotide Archive (ENA).
+All metagenomic *raw data sets* are archived at European Nucleotide Archive (ENA).
 
-You can browse and download the archived metagenomic at European Nucleotide Archive (ENA) here: 
-  * https://www.ebi.ac.uk/ena/data/view/PRJEB8682
+You can browse and download the archived metagenomic at European Nucleotide Archive (ENA) here:
 
+* https://www.ebi.ac.uk/ena/data/view/PRJEB8682
 * Based on the *raw datasets* as archived at ENA, the EMG pipeline analyzed all metagenomes:
   * You can browse the EMG results here: https://www.ebi.ac.uk/metagenomics/projects/ERP009703/
 
 ## Workable metagenomic datasets
-* [All **workable metagenome data** are available here](http://mb3is.megx.net/osd-files?path=/2014/datasets/workable/metagenomes). 
+
+* [All **workable metagenome data** are available here](http://mb3is.megx.net/osd-files?path=/2014/datasets/workable/metagenomes).
 * See [pre-processing pipeline for further documentation](https://github.com/MicroB3-IS/osd-analysis/wiki/Sequence-Data-Pre-Processing)
 
 ### Browsing EMG data tip
+
 Clicking on a sample name will take you to a page where you can view and download the results of the EBI analysis pipeline (EMG) by clicking on the hyperlinks labelled "Taxonomy" or "Function" or the download icon in the "Analysis Results" column. You can also download the sequence data itself from these download pages, for example you can download the data and results for the sample identified as OSD15_2014-06-21_0m_NPL022 (ERS667653) [here](https://www.ebi.ac.uk/metagenomics/projects/ERP009703/samples/ERS667653/runs/ERR771062/results/versions/2.0#ui-id-10).
 
 ## Assemblies
+
 * See the [OSD assemblies page](OSD-assemblies)
 
 ## EMG 16/18S rDNA analysis
+
 We analysed the rDNA sequences identified by the EMG pipeline through [SILVAngs](https://www.arb-silva.de/ngs/) and in addition we identified the rDNAs on the EMG derived dataset using the [SINA aligner](https://www.arb-silva.de/aligner/) and [SILVAngs](https://www.arb-silva.de/ngs/).
 
-- [Direct link to EMG data analysed with SILVAngs](http://mb3is.megx.net/osd-files/download?path=/2014/emg/silva-ngs/rRNASelector) 
-- [Direct link to EMG data screened with SINA aligner and analysed with SILVAngs](http://mb3is.megx.net/osd-files/download?path=/2014/emg/silva-ngs/SINA)
+* [Direct link to EMG data analysed with SILVAngs](http://mb3is.megx.net/osd-files/download?path=/2014/emg/silva-ngs/rRNASelector)
+* [Direct link to EMG data screened with SINA aligner and analysed with SILVAngs](http://mb3is.megx.net/osd-files/download?path=/2014/emg/silva-ngs/SINA)
 
-# Amplicon data (16/18S rDNA) Analysis by SILVAngs
+## Amplicon data (16/18S rDNA) Analysis by SILVAngs
 
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
@@ -158,13 +152,14 @@ Main analysis was done using SILVAngs pipeline on the **workable sequence data**
 
 The analysis was done for the sequence data as obtained from LGC, LifeWatch and Australia.
 
-## Note on taxonomy paths in MED exports ##
+## Note on taxonomy paths in MED exports
 
 The MED exports contain a taxonomy path for each sequence inside the FASTA header. However this taxonomy is not filtered by 93% quality value, which is the default in SILVAngs. Therefore, to be consistent with other SILVAngs exports, an extra file with filtered taxonomy was added to the MED folder. See [this issue](https://github.com/MicroB3-IS/osd-analysis/issues/20) for more details.
-  
+
 ## Analysis of **workable** 16S/18S rDNA from main sequence data set (by LGC)
 
-### 16S 
+### 16S
+
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
 * [Direct link to 16S data](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/lgc)
@@ -172,21 +167,25 @@ The MED exports contain a taxonomy path for each sequence inside the FASTA heade
 * [MED-formatted fasta exports of 16S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/lgc/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))
 
 ### 18S
+
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
 * [Direct link to 18S data](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lgc)
-* [Details of method and overview of results](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lgc/report) 
+* [Details of method and overview of results](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lgc/report)
 * [MED-formatted fasta exports of 18S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lgc/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))
 
 ## Analysis of **workable** 16S rDNA dataset from Australia (sequenced by RGC)
+
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
 * [Direct link to 16S data](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/australia)
-* [Details of method and overview of results](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/australia/report/osd2014_16s_australia-report.pdf) 
+* [Details of method and overview of results](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/australia/report/osd2014_16s_australia-report.pdf)
 * [MED-formatted fasta exports of 18S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/16s/australia/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))
 
 ## Analysis of **workable** 18S rDNA datasets (sequenced by Lifewatch Italy)
+
 ### V4
+
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
 * [Direct link to V4 data](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v4)
@@ -194,8 +193,9 @@ The MED exports contain a taxonomy path for each sequence inside the FASTA heade
 * [MED-formatted fasta exports of 18S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v4/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))
 
 ### V9
+
 **NB: One of the cluster/OTU files in the SILVAngs 'exports' folders contains the wrong sequences. Please refer to [issue #27](https://github.com/MicroB3-IS/osd-analysis/issues/27) for a detailed explanation.**
 
 * [Direct link to V9 data](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v9)
 * [Details of method and overview of results](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v9/report/osd2014_18s_v9_lifewatch-report.pdf)
-* [MED-formatted fasta exports of 18S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v9/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))  
+* [MED-formatted fasta exports of 18S data by sample](http://mb3is.megx.net/osd-files?path=/2014/silva-ngs/18s/lifewatch/v9/exports/med) (please read the [note on taxonomy paths in MED exports](#note-on-taxonomy-paths-in-med-exports))
