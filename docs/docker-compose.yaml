@@ -1,0 +1,15 @@
+version: "3"
+volumes: 
+  jekyll-bundles:
+services:
+  site:
+    command: jekyll serve --trace --livereload  --incremental -V --limit_posts 3 --force_polling --strict_front_matter
+    image: jekyll/jekyll:3.6
+    volumes:
+       # for using windows docker-compose from wsl export WSLENV=${WSLENV}:PWD/p
+      - ${PWD}:/srv/jekyll
+      # this persists the installation of gems in a host docker volume  
+      - jekyll-bundles:/usr/local/bundle
+    ports:
+      - "127.0.0.1:4000:4000"
+      - "35729:35729"
