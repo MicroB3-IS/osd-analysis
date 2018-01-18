@@ -3,4 +3,4 @@
 ---
 # Ocean Sampling Day
 
-Summary 
+Summary.
