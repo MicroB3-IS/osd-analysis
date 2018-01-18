@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+ruby RUBY_VERSION
+
+# This will help ensure the proper Jekyll version is running.
+#
+gem 'github-pages', group: :jekyll_plugins
+
+# own livereload version incl. fix working with docker for windows
+gem "jekyll-livereload",  :group => [:jekyll_plugins], :git => 'https://github.com/renzok/jekyll-livereload.git', :branch => 'renzok-patch-1'
+

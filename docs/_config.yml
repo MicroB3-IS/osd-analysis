@@ -1,1 +1,15 @@
 theme: jekyll-theme-cayman
+
+plugins:
+  - "jekyll-github-metadata"
+
+# needed by github-metadata plugin 
+# see https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md
+# and https://help.github.com/articles/repository-metadata-on-github-pages/
+repository: "MicroB3-IS/osd-analysis"
+
+# theme customizations
+
+title: "Ocean Sampling Day"
+
+description: "Documentation of Ocean Sampling Day"
