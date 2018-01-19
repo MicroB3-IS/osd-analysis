@@ -1,0 +1,14 @@
+- title: "Home"
+  href: "/"
+
+- title: "News"
+  href: "/news/"
+
+- title: "Data"
+  subcategories:
+    - title: "OSD 2014"
+      href: "/data/2014"
+    - title: "OSD 2015"
+      href: "/data/2015"
+    - title: "OSD 2015"
+      href: "/data/2015"

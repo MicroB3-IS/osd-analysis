@@ -23,7 +23,7 @@ $blockquote-text-color: #819198 !default;
     color: $header-heading-color;
     text-align: center;
     background-color: $header-bg-color;
-    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+    // background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   
     @include large {
       padding: 2rem 5rem;
@@ -55,6 +55,112 @@ $blockquote-text-color: #819198 !default;
       font-size: 1rem;
     }
   }
+
+nav {
+
+    /*Strip the ul of padding and list styling*/
+    ul {
+      background-color: $bg-color;
+      list-style-type:none;
+      margin:0;
+      padding:0;
+      // position: absolute;
+    }
+    /*Create a horizontal list with spacing*/
+    li {
+      // display:inline-block;
+      display: block; 
+      float: left;
+      margin-right: 1px;
+      position: relative;
+    }
+    /*Style for menu links*/
+    li a {
+      display:block;
+      min-width:140px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #fff;
+      background: $bg-color;
+      text-decoration: none;
+      z-index: 20;
+      position: relative;
+    }
+    /*Hover state for top level links*/
+    li:hover a {
+      background: $bg-color-transparent;
+    }
+    /*Style for dropdown links*/
+    li:hover ul a {
+      background: $bg-color-transparent;
+      height: 40px;
+      line-height: 40px;
+    }
+    /*Hover state for dropdown links*/
+    li:hover ul a:hover {
+      background: $bg-color;
+    }
+    /*Hide dropdown links until they are needed*/
+    li ul {
+      display: none;
+    }
+    /*Make dropdown links vertical*/
+    li ul li {
+      
+      display: block;
+      float: none;
+    }
+    /*Prevent text wrapping*/
+    li ul li a {
+      width: auto;
+      min-width: 100px;
+      padding: 0 20px;
+    }
+    /*Display the dropdown on hover*/
+    ul li a:hover + .hidden, .hidden:hover {
+      display: block;
+    }
+    /*Style 'show menu' label button and hide it by default*/
+    .show-menu {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fff;
+      background: $bg-color;
+      text-align: center;
+      padding: 10px 0;
+      display: none;
+    }
+    /*Hide checkbox*/
+    input[type=checkbox]{
+      display: none;
+    }
+    /*Show menu when invisible checkbox is checked*/
+    input[type=checkbox]:checked ~ #menu{
+      display: block;
+    }
+    /*Responsive Styles*/
+    @include small {
+    /*Make dropdown links appear inline*/
+      ul {
+        position: static;
+        display: none;
+      }
+      /*Create vertical spacing*/
+      li {
+        margin-bottom: 1px;
+      }
+      /*Make all menu links full width*/
+      ul li, li a {
+        width: 100%;
+      }
+      /*Display 'show menu' link*/
+      .show-menu {
+        display:block;
+      }
+    }
+}
 
 .btn {
     /* background-color: rgba(255, 255, 255, 0.08); */
