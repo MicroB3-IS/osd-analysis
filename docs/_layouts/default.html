@@ -28,18 +28,13 @@
   </section>
 
   <section class="main-content">
-
-    <a href="{{site.github.repository_url}}/blob/master/docs/{{ page.path }}" class="btn doc">
-      Improve documentation!
-    </a>
-
+    {% include edit-link.html %}
+    
     {{ content }}
 
     <footer class="site-footer">
       <span class="site-footer-owner">
-        <a href="{{site.github.repository_url}}/blob/master/docs/{{ page.path }}" class="btn">
-          Improve documentation!
-        </a>
+          {% include edit-link.html %}
       </span>
       {% if site.github.is_project_page %}
       <span class="site-footer-owner">
