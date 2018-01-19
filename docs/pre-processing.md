@@ -1,8 +1,12 @@
 ---
+title: "Sequence data pre-processing"
 permalink: "/pre-processing"
+data:
+  2014:
+    guide: "/data/2014"
 ---
 # Overview
-
+    
 **Definition:** *pre-processing* is defined as the process in which a subset of the original raw sequence data is created which fulfills defined sequence quality criteria, suitable for further analyses.
 
 **Intent:** The goal of formalizing this workflow is to provide all OSD participants (and the whole scientific community) with a single, quality-controlled data set in order to ensure comparability and repeatability of analysis results.
@@ -13,7 +17,7 @@ permalink: "/pre-processing"
 
 ## Data delivery by sequencing center
 
-Sequence data was delivered by tree different sequencing center. See also [Guide to OSD 2014 Data](https://github.com/MicroB3-IS/osd-analysis/wiki/Guide-to-OSD-2014-data)
+Sequence data was delivered by tree different sequencing center. See also [Guide to OSD 2014 Data]( {{ data.2014.guide | relative_url }} )
 
 ## Illumina pre-processing workflow
 
