@@ -1,4 +1,6 @@
 ---
+title: "Guide to OSD 2015 data"
+permalink: "/data/2015"
 ---
 # Introduction
 

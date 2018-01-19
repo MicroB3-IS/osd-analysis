@@ -1,4 +1,5 @@
 ---
+title: "Web page development"
 permalink: "/page"
 ---
 # Customizing

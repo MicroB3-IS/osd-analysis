@@ -1,9 +1,10 @@
 ---
+title: "Guide to OSD 2014 data"
 permalink: "/data/2014"
 ---
 # Introduction
 
-Purpose of this guide is to give a consolidated and authoritative overview of  OSD 2014 data.
+Purpose of this guide is to give a consolidated and authoritative overview of OSD 2014 data.
 
 You should
 

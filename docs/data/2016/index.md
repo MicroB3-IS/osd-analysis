@@ -1,14 +1,20 @@
+---
+title: "Guide to OSD 2016 data"
+permalink: "/data/2016"
+---
 # Introduction
 
 Purpose of this guide is to give a consolidated and authoritative overview of the data from MyOSD 2016.
 After reading this guide, you should:
+
 * have an overview of which data from MyOSD 2016 is available and how to access it
 * understand how the data was generated
 * be able to correctly use and interpret the data
 
-# Overview of Datasets
+## Overview of Datasets
 
 ## Primers
+
 The 16S **alma-alma** primer pair is described in [Parada et al., 2016](https://dx.doi.org/10.1111/1462-2920.13023).
 
 | ribosomal subunit | designation | direction | label | sequence | reference |
@@ -17,16 +23,22 @@ The 16S **alma-alma** primer pair is described in [Parada et al., 2016](https://
 | 16S | alma | reverse | 926R | 5'-CCGYCAATTYMTTTRAGTTT-3' | [Parada et al., 2016](https://dx.doi.org/10.1111/1462-2920.13023) |
 
 ## 16S datasets
+
 * MYOSD 2016 (alma-alma)
 * OSD 2016 (alma-alma)
 * One sample from OSD 2015 ()
 
 ## Technical samples
+
 ### Blanks
+
 Several blank samples were sequenced with the 16S alma-alma primer pair as controls. The DNA extractions were done using DNA extraction kits. For each kit one extraction was done on sterile water to ensure the kit was not contaminated. These blank samples are labelled as follows:
+
 * For MYOSD 2016, any sample whose label starts with **MYOSD0** (i.e. site_id=0, see section [Sample labeling](#Sample-labeling)) is a blank except for the samples listed below as other technical samples.
 * For OSD 2016, any sample whose label starts with **OSD0** (i.e. site_id=0, see section [Sample labeling](#Sample-labeling) is a blank except for the samples listed below as other technical samples.
+
 ### Others
+
 | sample label | comment / description |
 | :---| :---|
 | MYOSD0_2016-06_1 | control in compliance with the MyOSD sampling protocol.
@@ -36,7 +48,8 @@ Several blank samples were sequenced with the 16S alma-alma primer pair as contr
 | MYOSD0_2016-06_11 | Blu Tak experiment |
 
 ## Sample labeling
-All samples described here are labelled using the same labeling scheme as the [2015 datasets](Guide-to-2015-data#sample-labeling), which is independent of the sample metadata, and therefore different from the labeling in the 2014.
+
+All samples described here are labelled using the same labeling scheme as the [2015 datasets](/data/2015#sample-labeling), which is independent of the sample metadata, and therefore different from the labeling in the 2014.
 
 The current labeling scheme is as follows
 `${campaign_name}${site_id|kit_number}_${campaign_date}_${artificial_number}_${dataset_name}_${primer_pair_name}`

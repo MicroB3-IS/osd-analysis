@@ -6,7 +6,7 @@ data:
     guide: "/data/2014"
 ---
 # Overview
-    
+
 **Definition:** *pre-processing* is defined as the process in which a subset of the original raw sequence data is created which fulfills defined sequence quality criteria, suitable for further analyses.
 
 **Intent:** The goal of formalizing this workflow is to provide all OSD participants (and the whole scientific community) with a single, quality-controlled data set in order to ensure comparability and repeatability of analysis results.
